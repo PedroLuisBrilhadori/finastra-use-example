@@ -1,0 +1,120 @@
+@import '@finastra/angular-theme/lib/core/theming/palette';
+@import '@finastra/angular-theme/lib/core/style/spacing';
+
+:host {
+  display: block;
+}
+.transaction-list-card {
+  border-radius: $uxg-spacing-1 $uxg-spacing-1 $uxg-spacing-1 $uxg-spacing-1;
+
+  .mat-card-header {
+    display: block;
+
+    .transaction-list-header {
+      display: flex;
+      padding: $uxg-spacing-3 $uxg-spacing-0 $uxg-spacing-3 $uxg-spacing-2;
+
+      .transaction-list-title {
+        display: flex;
+        padding-left: $uxg-spacing-3;
+        flex-direction: column;
+
+        .uxg-body-2 {
+          opacity: 0.65;
+        }
+      }
+    }
+  }
+
+  .mat-card-footer {
+    border-radius: $uxg-spacing-0 $uxg-spacing-0 $uxg-spacing-1 $uxg-spacing-1;
+
+    .footer-content {
+      .transaction-actions {
+        margin: $uxg-spacing-0 $uxg-spacing-4 $uxg-spacing-3 $uxg-spacing-4;
+        padding: $uxg-spacing-4 $uxg-spacing-0 $uxg-spacing-0 $uxg-spacing-0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .transaction-count {
+          opacity: 0.5;
+        }
+
+        .transaction-filter {
+          display: flex;
+          flex-direction: row;
+          padding-right: $uxg-spacing-3;
+
+          .mat-icon {
+            margin-right: $uxg-spacing-2;
+          }
+        }
+      }
+
+      .transactions-overflow {
+        display: block;
+        height: 500px;
+        overflow-y: scroll;
+
+        .transaction-date-header {
+          display: flex;
+          padding: $uxg-spacing-0 $uxg-spacing-3 $uxg-spacing-0 $uxg-spacing-3;
+          margin: $uxg-spacing-0 $uxg-spacing-4 $uxg-spacing-0 $uxg-spacing-4;
+          width: -webkit-fill-available;
+          height: $uxg-spacing-3 * 2;
+          align-items: center;
+          border-radius: $uxg-spacing-1;
+          .uxg-subtitle-1 {
+            margin-left: $uxg-spacing-3;
+          }
+        }
+
+        .transaction-list {
+          margin: $uxg-spacing-0 $uxg-spacing-4 $uxg-spacing-0 $uxg-spacing-5;
+          padding: $uxg-spacing-4 $uxg-spacing-0 $uxg-spacing-2;
+
+          .transaction-item {
+            margin-bottom: $uxg-spacing-3;
+
+            .transaction-summary {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+
+              .transaction-summary-left {
+                display: flex;
+                flex-direction: row;
+                .uxg-body-2 {
+                  opacity: 0.65;
+                }
+
+                .uxg-icon-category {
+                  width: $uxg-spacing-3 * 2;
+                  height: $uxg-spacing-3 * 2;
+                }
+
+                .transaction-summary-info {
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: $uxg-spacing-3;
+
+                  .uxg-body-3 {
+                    opacity: 0.65;
+                  }
+                }
+              }
+
+              .transaction-summary-right {
+                display: flex;
+                flex-direction: row-reverse;
+                margin-right: $uxg-spacing-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
